@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+             $(document).ready(function(){
+              $("p").click(function(){
+               $(this).hide();
+            });
+
+               $("#a").dblclick(function(){
+                 $(this).hide();
+            });
+
+            $("#b").mouseenter(function(){
+                alert("Mouse Entered");
+            });
+
+            $("#c").mouseleave(function(){
+                alert("Mouse Leaved");
+            });
+
+            $("#d").mouseup(function(){
+                alert("Mouse up");
+            });
+
+            $("#e").mousedown(function(){
+                alert("Mouse down");
+            });
+
+            $("#f").hover(function(){
+                alert("You entered");
+            },
+            function(){
+                alert("Bye you now leave");
+            });
+
+            $("input").focus(function(){
+                $(this).css("background-color", "red");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "aqua");
+            });
+
+            $("#g").on("click", function(){
+                $(this).hide();
+            });
+
+            $("#h").on({
+                mouseenter: function(){
+                $(this).css("background-color", "lightgray");
+                },  
+                mouseleave: function(){
+                $(this).css("background-color", "lightblue");
+                }, 
+                click: function(){
+                $(this).css("background-color", "yellow");
+                }  
+            });
+        });
+    </script>
+    <style>
+        body{
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <p>If you click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>  <hr>
+
+    <p id="a">If you double-click on me, I will disappear.</p>
+    <p id="a">Click me away!</p>
+    <p id="a">Click me too!</p> <hr>
+
+    <p id="b">Mouse enter on me.</p> <hr>
+
+    <p id="c">Mouse leave from me.</p> <hr>
+
+    <p id="d">Mouse up on me.</p> <hr>
+
+    <p id="e">Mouse Down on me.</p> <hr> 
+
+    <p id="f">Hover It.</p> <hr>
+
+    Name: <input type="text" name="full name"> <br>
+    Email: <input type="email" name="email"> <hr>
+
+    <p id="g">This is paragraph</p>
+    <p id="g">This is again a paragraph</p>
+    <p id="g">😀😀</p> <hr>
+
+    <p id="h">This is like some magic.</p>
+</body>
+</html>

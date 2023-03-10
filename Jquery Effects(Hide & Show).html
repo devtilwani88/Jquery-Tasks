@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#hide").click(function(){
+        $("p").hide(1000);
+      });
+      $("#show").click(function(){
+        $("p").show(1000);
+      });
+
+      $("button").click(function(){
+        $("#a").hide(1000);
+      });
+    });
+    </script>
+</head>
+<body>
+  
+    <p>If you click on the "Hide" button, I will disappear.</p>
+    
+    <button id="hide">Hide</button>
+    <button id="show">Show</button> <hr>
+
+    <button>Hide</button>
+
+    <p id="a">This is a paragraph.</p> <hr>
+
+</body>
+</html>

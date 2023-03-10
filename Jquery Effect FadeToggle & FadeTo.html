@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#div1").fadeToggle();
+        $("#div2").fadeToggle("slow");
+        $("#div3").fadeToggle(3000);
+      });
+
+      $("button").click(function(){
+        $("#div4").fadeTo("slow", 0.20);
+        $("#div5").fadeTo("slow", 0.5);
+        $("#div6").fadeTo("slow", 0.8);
+      });
+    });
+    </script>
+</head>
+<body>
+    
+    <p>Demonstrate fadeToggle()</p>
+    
+    <button>Click to fade in/out boxes</button> <br> <br>
+    
+    <div id="div1" style="width:80px;height:80px;
+    background-color:red;"></div>
+    <br>
+    <div id="div2" style="width:80px;height:80px;
+    background-color:green;"></div>
+    <br>
+    <div id="div3" style="width:80px;height:80px;
+    background-color:blue;"></div> <hr>
+
+    <p>Demonstrate fadeTo()</p>
+
+    <button>Click to fade boxes</button><br><br>
+
+    <div id="div4" style="width:80px;height:80px;
+    background-color:teal;"></div> <br>
+    <div id="div5" style="width:80px;height:80px;
+    background-color:saddlebrown;"></div> <br>
+    <div id="div6" style="width:80px;height:80px;
+    background-color:springgreen;"></div>
+
+</body>
+</html>
